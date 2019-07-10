@@ -30,6 +30,10 @@ curl -X GET -u '[username]:[token]' https://api.github.com/user/repos
 
 ### Add new repo with readme
 ```
-curl -X POST https://api.github.com/user/repos -u '[username]:[token]' -H 'Content-Type: application/json' -d '{ "name": "[repo_name]", "private": false, "auto_init": true }'
+curl -X POST \
+  https://api.github.com/user/repos \
+  -u '[username]:[token]' \
+  -H 'Content-Type: application/json' \
+  -d '{ "name": "[repo_name]", "private": false, "auto_init": true }'
 
 ```
