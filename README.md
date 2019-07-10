@@ -1,4 +1,4 @@
-# Github-API-Examples
+# Github API Examples
 *Examples of how to access github using API Access*<br>
 Resources:<br>
 * https://developer.github.com/v3/auth/#basic-authentication
