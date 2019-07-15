@@ -27,6 +27,6 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{ "name": "'$projectname'", "private": false, "auto_init": true }'
   
-pushd $projectslocation && git clone git@github.com:$username/$projectname.git && popd
+pushd $projectslocation && git clone git@github.com:$username/${projectname,,}.git && popd
 
 
