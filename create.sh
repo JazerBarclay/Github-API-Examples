@@ -28,5 +28,3 @@ curl -X POST \
   -d '{ "name": "'$projectname'", "private": false, "auto_init": true }'
   
 pushd $projectslocation && git clone git@github.com:$username/${projectname,,}.git && popd
-
-
