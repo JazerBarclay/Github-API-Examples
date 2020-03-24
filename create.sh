@@ -6,19 +6,15 @@ display_usage() {
 }
 
 username=joebloggs
-token=0123456789
+token=`cat $HOME/.keys/git_api_key`
 projectslocation=~/projects
 
-if [ $# -le 1 ]
-then
+if [ $# -le 1 ]; then
 	display_usage
 	exit 1
 fi
 
-projectname=$(echo $@ | tr " " -)
-#projectname=$(echo $@ | sed -e "s/\b\(.\)/\u\1/g" | tr " " -)
-#projectname=$(echo $1 | sed -e "s/\b\(.\)/\u\1/g" | tr " " -)
-#projectname=$1
+projectname=$(echo $@ | tr " " - | tr '[:upper:]' '[:lower:]')
 echo "Creating project: $projectname"
 
 curl -X POST \
